@@ -1,4 +1,5 @@
 from data_store import expenses
+from storage import save_expenses
 
 
 def add_expense():
@@ -15,6 +16,7 @@ def add_expense():
     }
 
     expenses.append(expense)
+    save_expenses(expenses)
 
     print("Expense added successfully!")
 
@@ -52,5 +54,6 @@ def delete_expense():
         print("Expense number out of range.")
         return
     deleted_expense =expenses.pop(expense_number-1)
+    save_expenses(expenses)
 
     print(f"Expense '{deleted_expense['description']}' deleted successfully!")
