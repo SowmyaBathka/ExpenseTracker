@@ -20,4 +20,13 @@ def add_expense():
 
 
 def view_expenses():
-    print("\nView Expenses feature will be implemented later.")
+    print("\n---View Expenses---")
+
+    if len(expenses)==0:
+        print("No expenses found.")
+        return 
+    for index, expense in enumerate(expenses,start=1):
+        print(f"\nExpense {index}")
+        print("Amount :",expense["amount"])
+        print("Category :",expense["category"])
+        print("Description :",expense["description"])
