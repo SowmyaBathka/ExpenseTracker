@@ -18,5 +18,10 @@
         "amount": "500",
         "category": "travel",
         "description": "bus"
+    },
+    {
+        "amount": "250",
+        "category": "Food",
+        "description": "Lunch"
     }
 ]

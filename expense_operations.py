@@ -1,5 +1,6 @@
 from data_store import expenses
 from storage import save_expenses
+from validations import validate_amount, validate_text
 
 
 def add_expense():
@@ -8,6 +9,15 @@ def add_expense():
     amount = input("Enter Amount: ")
     category = input("Enter Category: ")
     description = input("Enter Description: ")
+
+    if not validate_amount(amount):
+        return 
+    
+    if not validate_text(category, "Category"):
+        return 
+    
+    if not validate_text(description,"Description"):
+        return
 
     expense = {
         "amount": amount,
