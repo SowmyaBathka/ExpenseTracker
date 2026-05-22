@@ -85,3 +85,26 @@ def average_expenses():
     average = total/len(expenses)
 
     print(f"Average Expense: ₹{average}")
+
+def category_analysis():
+    print("\n---Category-wise Expense Analysis---")
+
+    if len(expenses)==0:
+        print("No expenses available.")
+        return 
+    
+    category_totals = {}
+
+    for expense in expenses:
+        category=expense["category"]
+        amount = float(expense["amount"])
+
+        if category in category_totals:
+            category_totals[category]+=amount 
+        else:
+            category_totals[category] = amount 
+
+    print("\nCategory Summary:")
+
+    for category,total in category_totals.items():
+        print(f"{category}: ₹{total}")

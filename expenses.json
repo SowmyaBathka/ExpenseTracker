@@ -13,5 +13,10 @@
         "amount": "2000",
         "category": "dresses",
         "description": "shopping"
+    },
+    {
+        "amount": "500",
+        "category": "travel",
+        "description": "bus"
     }
 ]
