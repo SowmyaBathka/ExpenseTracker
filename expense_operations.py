@@ -39,6 +39,7 @@ def view_expenses():
         return 
     for index, expense in enumerate(expenses,start=1):
         print(f"\nExpense {index}")
+        print("---------------------")
         print("Amount :",expense["amount"])
         print("Category :",expense["category"])
         print("Description :",expense["description"])
@@ -117,7 +118,7 @@ def category_analysis():
     print("\nCategory Summary:")
 
     for category,total in category_totals.items():
-        print(f"{category}: ₹{total}")
+        print(f"{category<15}: ₹{total}")
 
 
 def search_expenses():
@@ -128,19 +129,24 @@ def search_expenses():
         return
 
     search_value = input("Enter category or description to search: ").strip().lower()
-
-    found = False
+    
+    matching_expenses=[]
 
     for expense in expenses:
         if (
             expense["category"].lower() == search_value
             or expense["description"].lower() == search_value
         ):
-            print("\nMatching Expense:")
+            matching_expenses.append(expense)
+    if len(matching_expenses)==0:
+            print("No matching expenses found.")
+            return 
+    
+    print("\nMatching Expense:")
+
+    for expense in matching_expenses:
+            print("------------------")
             print("Amount     :", expense["amount"])
             print("Category   :", expense["category"])
             print("Description:", expense["description"])
-            found = True
-
-    if not found:
-        print("No matching expenses found.")
+            

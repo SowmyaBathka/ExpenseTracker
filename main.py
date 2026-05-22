@@ -2,7 +2,7 @@ from expense_operations import add_expense, view_expenses, delete_expense, total
 
 def show_menu():
     print("\n"+"*"*40)
-    print("---EXPENSE TRACKER SYSTEM---")
+    print("   EXPENSE TRACKER SYSTEM   ")
     print("*"*40)
     print("1.Add Expense")
     print("2.View Expense")
@@ -42,7 +42,7 @@ def main():
                 search_expenses()
 
             elif choice == "8":
-                print("\nThank You for using Expense Tracker!")
+                print("\nThank you for using Expense Tracker!")
                 break 
 
             else:
