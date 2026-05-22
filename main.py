@@ -1,4 +1,4 @@
-from expense_operations import add_expense, view_expenses, delete_expense, total_expenses,  average_expenses, category_analysis
+from expense_operations import add_expense, view_expenses, delete_expense, total_expenses,  average_expenses, category_analysis, search_expenses
 
 def show_menu():
     print("\n"+"*"*40)
@@ -10,13 +10,14 @@ def show_menu():
     print("4.Total Spending")
     print("5.Average Spending")
     print("6.Category Analysis")
-    print("7.Exit")
+    print("7.Search Expense")
+    print("8.Exit")
 
 def main():
     while True:
         show_menu()
 
-        choice= input("Enter your choice (1-7):")
+        choice= input("Enter your choice (1-8):")
 
         if choice == "1":
             add_expense()
@@ -37,10 +38,13 @@ def main():
             category_analysis()
 
         elif choice == "7":
+            search_expenses()
+
+        elif choice == "8":
             print("\nThank You for using Expense Tracker!")
             break 
 
         else:
-            print("\nInvalid choice! Please enter a number between 1 and 7.")
+            print("\nInvalid choice! Please enter a number between 1 and 8.")
             
 main()
