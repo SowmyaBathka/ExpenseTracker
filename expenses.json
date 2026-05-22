@@ -8,5 +8,10 @@
         "amount": "300",
         "category": "stationary",
         "description": "children school."
+    },
+    {
+        "amount": "2000",
+        "category": "dresses",
+        "description": "shopping"
     }
 ]

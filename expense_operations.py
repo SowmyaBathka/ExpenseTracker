@@ -69,3 +69,19 @@ def total_expenses():
     for expense in expenses:
         total+=float(expense["amount"])
     print(f"Total Spending: ₹{total}")
+
+def average_expenses():
+    print("\n---Average Expense Analysis---")
+
+    if len(expenses)==0:
+        print("No Expenses available.")
+        return
+     
+    total=0
+
+    for expense in expenses:
+        total += float(expense["amount"])
+
+    average = total/len(expenses)
+
+    print(f"Average Expense: ₹{average}")
