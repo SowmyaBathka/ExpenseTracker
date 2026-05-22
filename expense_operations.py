@@ -57,3 +57,15 @@ def delete_expense():
     save_expenses(expenses)
 
     print(f"Expense '{deleted_expense['description']}' deleted successfully!")
+
+def total_expenses():
+    print("\n---Total Expense Analysis---")
+
+    if len(expenses)==0:
+        print("No expenses available.")
+        return 
+    total=0
+
+    for expense in expenses:
+        total+=float(expense["amount"])
+    print(f"Total Spending: ₹{total}")

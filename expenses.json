@@ -3,5 +3,10 @@
         "amount": "250",
         "category": "Foo",
         "description": "Lunch"
+    },
+    {
+        "amount": "300",
+        "category": "stationary",
+        "description": "children school."
     }
 ]
