@@ -20,7 +20,7 @@ def add_expense():
         return
 
     expense = {
-        "amount": amount,
+        "amount": float(amount),
         "category": category,
         "description": description
     }
@@ -118,7 +118,7 @@ def category_analysis():
     print("\nCategory Summary:")
 
     for category,total in category_totals.items():
-        print(f"{category<15}: ₹{total}")
+        print(f"{str(category):<15}: ₹{total}")
 
 
 def search_expenses():

@@ -1,27 +1,17 @@
 [
     {
-        "amount": "250",
-        "category": "Foo",
-        "description": "Lunch"
+        "amount": 250.0,
+        "category": "food",
+        "description": "lunch"
     },
     {
-        "amount": "300",
-        "category": "stationary",
-        "description": "children school."
-    },
-    {
-        "amount": "2000",
+        "amount": 75543.0,
         "category": "dresses",
         "description": "shopping"
     },
     {
-        "amount": "500",
-        "category": "travel",
-        "description": "bus"
-    },
-    {
-        "amount": "250",
-        "category": "Food",
-        "description": "Lunch"
+        "amount": 2500.0,
+        "category": "food",
+        "description": "cafe date"
     }
 ]
